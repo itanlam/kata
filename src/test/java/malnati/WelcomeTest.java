@@ -1,34 +1,18 @@
-package kata.src.test.java.malnati;
+package malnati;
 
-import junit.framework.Test;
-import junit.framework.TestCase;
-import junit.framework.TestSuite;
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+import org.junit.runners.JUnit4;
 
-public class WelcomeTest extends TestCase {
+
+import malnati.Welcome;
+
+public class WelcomeTest { 
     
-    /**
-     * Create the test case
-     *
-     * @param testName name of the test case
-     */
-    public AppTest( String testName )
-    {
-        super( testName );
-    }
-
-    /**
-     * @return the suite of tests being tested
-     */
-    public static Test suite()
-    {
-        return new TestSuite( AppTest.class );
-    }
-
-    /**
-     * Rigourous Test :-)
-     */
-    public void testApp()
-    {
-        assertTrue( true );
+    @Test
+    public void testWelcome() {
+        assertEquals("Your function should have returned 'Welcome'. Try again.","Welcome", Welcome.greet("english"));
+        assertEquals("Your function should have returned 'Welkom'. Try again.", "Welkom", Welcome.greet("dutch"));
+        assertEquals("Your function should have returned 'Welcome'. Try again.", "Welcome", Welcome.greet("IP_ADDRESS_INVALID"));
     }
 }

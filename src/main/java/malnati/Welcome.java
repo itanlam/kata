@@ -1,4 +1,4 @@
-package kata.src.main.java.malnati;
+package malnati;
 
 import java.util.Map;
 
@@ -29,7 +29,7 @@ public class Welcome {
     Map.entry("welsh", "Croeso")
    );
    
-   public static String greet(String language){
+   public static String greet(String language) {
      if(language == null || language == EMPTY_STRING) {
        return IP_ADDRESS_REQUIRED;
      } 
